@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./build/styles/style.css">
+    <link rel="stylesheet" href="./build/styles/mon.css">
+    <link rel="stylesheet" href="./build/styles/timer.css">
+    <script src="script.js" defer></script>
+
+    
+    <title>QUIZZ-IT</title>
+</head>
+
+<body>
+    <div class="main-container centrer">
+        <div class="quiz-container">
+            <h1>QUIZZ-IT</h1>
+            <div class="right">
+                <br>
+                <div id="timer"><br><span id="time">10</span> secondes
+                    <div class="sablier">
+                        <div class="timerColor"></div>
+                        <div class="timerMask"><img src="./assets/images/Sablier_lite.png" alt="" srcset=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="imagece">
+                <img id="questionImage" src="" alt="" width="300px">
+            </div>
+            <div class="fixer">
+                <p id="question">Question 1 : Est-ce que la Terre est plate ?</p>
+                <div class="button-container">
+                    <button class=buttonTrueFalse id="trueButton">VRAI</button>
+                    <button class=buttonTrueFalse id="falseButton">FAUX</button>
+
+                    <button id="rejouerbtn" style="display: none;"><a href="./questions.html">REJOUER</a></button>
+                    <div id="scores">SCORE : <span id="score">0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    <div class="comet"></div>
+
+</body>
+
+</html>

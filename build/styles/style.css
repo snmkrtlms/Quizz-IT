@@ -1,0 +1,257 @@
+@font-face {
+    font-family: "ocr";
+    src: url("/assets/fonts/OCRAEXT.TTF");
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.centrer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#introduction{
+    margin-top: 75px;
+    font-size: 1.6rem;
+}
+
+.intro_text{
+    margin: 5%;
+}
+
+#intro2{
+    font-size: 1.3rem;
+}
+
+
+.quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: 20%;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: "ocr", sans-serif;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+}
+
+#timer {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: "ocr";
+}
+
+#scores{
+    font-family: "ocr";
+    position: fixed;
+    display: block;
+    justify-content: center;
+    margin-top: 100px;
+
+    /* background-color: #0026ff;
+    padding: 10px;
+    color: #fff; */
+    
+}
+
+.timerColor {
+    width: 20px;
+    height: 31px;
+    background-color: green;
+}
+
+
+.timerColor,
+.timerMask {
+    position: absolute;
+    top: 82px;
+    left: 318px;
+}
+
+.timerEnd {
+    height: 0;
+    transition: height linear 10s, top linear 10s;
+    top: 113px;
+
+}
+
+.imagece {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixer{
+margin-top: 40px;
+}
+
+.finfixer{
+    margin-top: 50px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#rejouerbtn a{
+    text-decoration: none;
+    color: #1d1736;
+    font-family: 'ocr';
+    
+}
+
+#rejouerbtn a:hover{
+    color: #fff;
+}
+
+#rejouerbtn a:active{
+    color: #fff;
+}
+
+.btnstart, #rejouerbtn {
+    margin-top: 40px;
+    position: relative;
+    padding: 15px 25px;
+    border-radius: 7px;
+    border: 1px solid #1d1736;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #1d1736;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btnstart:hover, #rejouerbtn:hover{
+    color: #fff;
+    background: #1d1736;
+    box-shadow: 0 0 30px 5px #1d1736;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.btnstart:hover::before, #rejouerbtn:hover::before{
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.btnstart::before, #rejouerbtn::before{
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.btnstart:active, #rejouerbtn:active{
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+/* Styles pour le bouton "Vrai" en cas de réponse correcte */
+#trueButton.correct {
+    background-color: #4CAF50;
+    /* Vert */
+    color: #fff;
+    /* Texte blanc */
+}
+
+/* Styles pour le bouton "Faux" en cas de réponse correcte */
+#falseButton.correct {
+    background-color: #4CAF50;
+    /* Vert */
+    color: #fff;
+    /* Texte blanc */
+}
+
+/* Styles pour le bouton "Vrai" en cas de réponse incorrecte */
+#trueButton.incorrect {
+    background-color: #FF5733;
+    /* Rouge */
+    color: #fff;
+    /* Texte blanc */
+}
+
+/* Styles pour le bouton "Faux" en cas de réponse incorrecte */
+#falseButton.incorrect {
+    background-color: #FF5733;
+    /* Rouge */
+    color: #fff;
+    /* Texte blanc */
+}
+
+.buttonTrueFalse {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 15px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin-bottom: 8rem;
+}
+
+.buttonTrueFalse:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+}
